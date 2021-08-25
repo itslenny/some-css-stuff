@@ -18,7 +18,7 @@ function doTheStuff() {
     // I am listening to the PARENT item of the links
     // this is an example of "event bubbling"
     // when the link is clicked the event "bubbles up" to each parent item
-    // so I only have to listen to the one element (#page-nave) for click events
+    // so I only have to listen to the one element (#page-nav) for click events
     // instead of needing to add a click listener to each nav item individually
     // event.target contains the element that was actually clicked
     navLinks.addEventListener('click', event => {
@@ -39,7 +39,8 @@ function doTheStuff() {
             return;
         }
 
-        const targetPage = document.getElementById('page-' + eventHref.replace('#', ''));
+        const targetPageElementId = 'page-' + eventHref.replace('#', '');
+        const targetPage = document.getElementById(targetPageElementId);
 
         if (!targetPage) {
             alert('TARGET PAGE NOT FOUND!!!');
