@@ -1,0 +1,87 @@
+/* just the css examples live here... all the core page css is in page-style.css */
+
+
+.shadow-text {
+    text-shadow: #0000AA 5px 5px 5px;
+
+    /* transition css makes it animate between hover/non hover state */
+    transition: text-shadow 0.5s;
+}
+
+.shadow-text:hover {
+    text-shadow: #FF0000 -5px -5px 5px;
+}
+
+.shadow-text2 {
+    text-shadow: green 5px 5px 5px;
+    transition: text-shadow 0.5s;
+}
+
+.shadow-text2:hover {
+    text-shadow: purple 5px 5px 5px;
+}
+.shadow-text3 {
+    text-shadow: 12px 4px 2px red, -12px -4px 5px green, 12px -4px 5px blue;
+    transition: text-shadow 0.5s;
+}
+
+.shadow-text3:hover {
+    text-shadow: purple 5px 5px 5px;
+}
+
+.shadow-box {
+    box-shadow: #666 5px 5px 5px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #222;
+}
+.shadow-box:hover {
+    /* inset can't be animated */
+    box-shadow: inset #666 5px 5px 5px;
+}
+
+.shadow-box2 {
+    box-shadow: #FF0000 5px 5px 5px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #222;
+    transition: box-shadow 0.5s;
+}
+.shadow-box2:hover {
+    box-shadow: #AA0000 5px 5px 50px;
+}
+
+.hover-swap .on {
+    display: block;
+}
+.hover-swap .off {
+    display: none;
+}
+
+.hover-swap:hover .on {
+    display: none;
+}
+.hover-swap:hover .off {
+    display: block;
+}
+
+.spin-it-right-round-baby {
+    transform: rotate(0);
+    transform-origin: center;
+    transition: transform 1s;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.spin-it-right-round-baby:hover {
+    transform: rotate(180deg);
+}
+.hover-invert {
+    filter: invert(0);
+    transition: filter 1s;
+}
+.hover-invert:hover {
+    filter: invert(100%);
+}

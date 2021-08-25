@@ -1,0 +1,111 @@
+/* All the main page styles live here to keep them separate from the individual css examples (in fun-stuff.css) */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.page {
+    display: flex;
+    align-items: start center;
+
+    /* I used these borders while designing the page... leaving them here for reference */
+    /* border: 2px solid blue; */
+}
+
+#page-nav {
+    position: absolute;
+    flex: 1;
+    max-width: 300px;
+    min-width: 200px;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s;
+
+    /* I used these borders while designing the page... leaving them here for reference */
+    /* border: 2px solid yellow; */
+}
+
+#page-nav.opened {
+    transform: translate(0,0);
+}
+
+#mobile-nav-show-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    right: -35px;
+    top: 10px;
+    transform: rotate(0);
+    transition: transform 0.5s;
+}
+
+#page-nav.opened #mobile-nav-show-button {
+    transform: rotate(180deg);
+}
+
+#page-nav li {
+    list-style: none;
+    margin: 5px;
+    background: #666;
+}
+
+#page-nav li:hover {
+    background: #AA6666;
+}
+
+#page-nav li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.page-content {
+    margin-left: 20px;
+    margin-top: 30px;
+    /* border: 2px solid green; */
+}
+
+.inner-content {
+    display: none;
+}
+
+.inner-content.showing {
+    display: block;
+}
+
+.bigish {
+    font-size: 3em;
+}
+
+.inlined {
+    display: inline-block;
+}
+
+.me-pic {
+    width: 300px;
+}
+
+/* desktop only... above stuff assumes mobile first */
+@media screen and (min-width: 960px) {
+    #page-nav {
+        position: relative;
+        transform: translate(0,0);
+    }
+
+    #mobile-nav-show-button {
+        display: none;
+
+        /*
+        hiding it by moving it off the edge of the page instead
+        because if it's "display none" javascript can't
+        */
+        /* transform: translate(-1000px,-1000px); */
+    }
+}
