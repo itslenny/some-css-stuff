@@ -101,11 +101,5 @@ html, body {
 
     #mobile-nav-show-button {
         display: none;
-
-        /*
-        hiding it by moving it off the edge of the page instead
-        because if it's "display none" javascript can't
-        */
-        /* transform: translate(-1000px,-1000px); */
     }
 }
